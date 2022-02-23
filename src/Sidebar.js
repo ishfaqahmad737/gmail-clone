@@ -14,31 +14,35 @@ import PersonIcon from '@mui/icons-material/Person';
 import PhoneIcon from '@mui/icons-material/Phone';
 import DuoIcon from '@mui/icons-material/Duo';
 function Sidebar() {
-  return (<div class="sidebar">'
-  <Button startIcon={<AddIcon />}
-    className='sidebar__compose'>
-      Compose
-  </Button>
-  <SidebarOption Icon={InboxIcon}title='Inbox' focused={true} number={54}/>
-  <SidebarOption Icon={StartIcon}title='Starred' number={54}/>
-  <SidebarOption Icon={AccessTimeIcon}title='Snoozed' number={54}/>
-  <SidebarOption Icon={LabelImportantIcon}title='Important' number={54}/>
-  <SidebarOption Icon={NearMeIcon}title='Sent' number={54}/>
-  <SidebarOption Icon={NoteIcon}title='Drafts' number={54}/>
-  <SidebarOption Icon={ExpandMoreIcon}title='More' number={54}/>
-  <div class="sidebar__footer">
-    <div class="sidebar__footerIcon">
-      <IconButton>
-        <PersonIcon/>
-      </IconButton>
-      <IconButton>
-        <DuoIcon/>
-      </IconButton>
-      <IconButton>
-        <PhoneIcon/>
-      </IconButton>
-    </div>
-  </div>
+  return (
+  <div className="sidebar">
+        <Button startIcon={<AddIcon />}
+          className='sidebar__compose'>
+            Compose
+        </Button>
+        
+            <SidebarOption Icon={InboxIcon}title='Inbox' focused={true} number={54}/>
+            <SidebarOption Icon={StartIcon}title='Starred' number={54}/>
+            <SidebarOption Icon={AccessTimeIcon}title='Snoozed' number={54}/>
+            <SidebarOption Icon={LabelImportantIcon}title='Important' number={54}/>
+            <SidebarOption Icon={NearMeIcon}title='Sent' number={54}/>
+            <SidebarOption Icon={NoteIcon}title='Drafts' number={54}/>
+            <SidebarOption Icon={ExpandMoreIcon}title='More' number={54}/>
+            
+            <div className="sidebar__footer">
+              <div className="sidebar__footerIcon">
+                <IconButton>
+                  <PersonIcon/>
+                </IconButton>
+                <IconButton>
+                  <DuoIcon/>
+                </IconButton>
+                <IconButton>
+                  <PhoneIcon/>
+                </IconButton>
+              </div>
+            </div>
+        
     </div>)
 }
 
