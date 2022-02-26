@@ -1,0 +1,28 @@
+.section{
+    color:grey;
+    border-bottom-width:2px;
+    border-width:0px !important;
+    flex:1;
+    min-width:100px;
+    max-width:250px;
+    display:flex;
+    align-items:center;
+    padding:15px 12px 15px 12px;
+    gap: .8rem;
+    
+}
+.section> .MuiSvgIcon-root{
+    font-size:1.2rem;
+}
+.section > h4{
+    font-size:.85rem;
+    font-weight:400;
+}
+.section--active{
+    border-bottom-width:3px !important;
+}
+.section:hover{
+    background: whitesmoke;
+    border-bottom-width: 3px !important;
+    color: black;
+}

@@ -1,14 +1,37 @@
 .emailList{
     flex: 1;
-    border: 1px solid black;
+    
     overflow: scroll;
 }
 .emailList__settings{
     display:flex;
+    min-width:80vw;
     justify-content:space-between;
     border-bottom:2px solid whitesmoke;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
+    padding-right:10px;
+    z-index:999;
     background: white;
 }
+.emailList__settings__left> .MuiButtonBase-root >.MuiSvgIcon-root{
+    font-size: 1.3rem;
+}
+.emailList__settings__right> .MuiButtonBase-root >.MuiSvgIcon-root{
+    font-size: 1.3rem;
+}
+.emailList__section{
+    display:flex;
+    border-bottom: 2px solid whitesmoke;
+    
+}
+.emailList__list{
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    min-width: 78vw;
+    
+    
+}
+
