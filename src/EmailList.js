@@ -11,11 +11,13 @@ import KeyboardHideIcon from '@mui/icons-material/KeyboardHide';
 import InboxIcon from '@mui/icons-material/Inbox';
 import PeopleIcon from '@mui/icons-material/People';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+
 import './EmailList.css';
 import Section from './Section'
 function EmailList() {
+    
   return (
-    <div className="emailList">
+    <div className="emailList" >
         <div className="emailList__settings">
             <div class="emailList__settings__left">
                 <Checkbox/>
@@ -52,9 +54,9 @@ function EmailList() {
         </div>
 
         <div className="emailList__list">
-            <EmailRow title='Twitch' subject='Hey fellow streamer!!' description='This is a test' time='10pm' />
-            <EmailRow title='Twitch' subject='Hey fellow streamer!!' description='This is a test' time='10pm' />
-            <EmailRow title='Twitch' subject='Hey fellow streamer!!' description='This is a test' time='10pm' />
+            <EmailRow  title='Twitch' subject='Hey fellow streamer!!' description='This is a test' time='10pm' />
+            <EmailRow  title='Twitch' subject='Hey fellow streamer!!' description='This is a test' time='10pm' />
+            <EmailRow  title='Twitch' subject='Hey fellow streamer!!' description='This is a test' time='10pm' />
             
         </div>
        
