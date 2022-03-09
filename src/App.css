@@ -1,8 +1,12 @@
 .app{
     
     height:100vh;
+    min-width: 45rem;
 }
 .app__body{
     display:flex;
     height:100vh; 
+}
+.iconstyles{
+    font-size: 1.3rem !important;
 }

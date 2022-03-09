@@ -54,8 +54,8 @@ function EmailList() {
         </div>
 
         <div className="emailList__list">
-            <EmailRow  title='Twitch' subject='Hey fellow streamer!!' description='This is a test' time='10pm' />
-            <EmailRow  title='Twitch' subject='Hey fellow streamer!!' description='This is a test' time='10pm' />
+            <EmailRow  title='Twitch' subject='Hey fellow streamer!!loremloremloremloremlorem' description='This is a test' time='10pm' />
+            <EmailRow  title='Twitch' subject='Hey fellow streamer!!' description='This is a test testtesttesttesttest' time='10pm' />
             <EmailRow  title='Twitch' subject='Hey fellow streamer!!' description='This is a test' time='10pm' />
             
         </div>

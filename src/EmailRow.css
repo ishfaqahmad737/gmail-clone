@@ -28,7 +28,7 @@
 .emailRow__message{
     display:flex;
     flex-wrap: wrap;
-    flex:.80;
+    flex: .95 1;
     align-items:center;
     justify-content:center;
     
@@ -37,11 +37,15 @@
 .emailRow__message>h4{
     font-size: .85em;
     font-weight: 700;
+    text-overflow: ellipsis;
+    width: 13vw;
 }
 .emailRow__description{
     font-size: .85em;
     font-weight: 400;
     color:grey;
+    width: 10vw;
+    text-overflow: ellipsis;
 }
 .emailRow__time{
     

@@ -13,7 +13,7 @@ function App() {
         <Sidebar />
         <Routes>
           <Route path='/' element={<EmailList/>}/>
-          <Route path='/mail' element={<Mail/>}/>
+          <Route path='/mail' element={<Mail />}/>
           <Route
       path="*"
       element={
