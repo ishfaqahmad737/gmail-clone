@@ -1,8 +1,7 @@
 import counterReducer, {
   increment,
-  decrement,
   incrementByAmount,
-} from './counterSlice';
+} from './mailSlice';
 
 describe('counter reducer', () => {
   const initialState = {

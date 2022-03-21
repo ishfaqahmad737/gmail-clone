@@ -6,6 +6,7 @@
 .app__body{
     display:flex;
     height:100vh; 
+    
 }
 .iconstyles{
     font-size: 1.3rem !important;

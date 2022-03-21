@@ -12,7 +12,7 @@
     position: sticky;
     top: 0;
     padding-right:10px;
-    z-index:999;
+    
     background: white;
 }
 .emailList__settings__left> .MuiButtonBase-root >.MuiSvgIcon-root{
