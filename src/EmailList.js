@@ -19,7 +19,7 @@ function EmailList() {
   return (
     <div className="emailList" >
         <div className="emailList__settings">
-            <div class="emailList__settings__left">
+            <div className="emailList__settings__left">
                 <Checkbox/>
                 <IconButton>
                     <ArrowDropDownIcon/>
@@ -31,7 +31,7 @@ function EmailList() {
                     <MoreVertIcon/>
                 </IconButton>
             </div>
-            <div class="emailList__settings__right">
+            <div className="emailList__settings__right">
                 <IconButton>
                     <ChevronLeftIcon/>
                 </IconButton>

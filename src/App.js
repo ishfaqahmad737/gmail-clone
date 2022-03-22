@@ -5,8 +5,12 @@ import Sidebar from './Sidebar'
 import EmailList from './EmailList'
 import Mail from './Mail'
 import SendMail from './SendMail'
-import {Routes,Route,useNavigate} from "react-router-dom";
+import {Routes,Route} from "react-router-dom";
+import {useSelector} from 'react-redux'
+import{selectComposeFormState} from './features/mailSlice'
 function App() {
+  let composeFormState = useSelector(selectComposeFormState);
+ console.log(composeFormState);
   return (
     <div className="app">
       <Header />
@@ -27,7 +31,7 @@ function App() {
               </Routes>
              
       </div>
-      <SendMail/>
+      {composeFormState && <SendMail/>}
     </div>
   );
 }

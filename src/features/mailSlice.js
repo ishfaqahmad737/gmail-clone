@@ -11,13 +11,13 @@ export const mailSlice = createSlice({
     openComposeForm: (state) => {
       state.composeFormOpen = true;
     },
-    closeOpenForm: (state) => {
-      state.closeOpenForm = false;
+    closeComposeForm: (state) => {
+      state.composeFormOpen = false;
     }
   }
 });
 
-export const { openComposeForm, closeOpenForm} = mailSlice.actions;
+export const { openComposeForm, closeComposeForm} = mailSlice.actions;
 
 export const selectComposeFormState = (state) => state.mail.composeFormOpen;
 

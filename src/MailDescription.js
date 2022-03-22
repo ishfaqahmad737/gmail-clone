@@ -12,7 +12,7 @@ function MailDescription() {
             <p className="subject">Twitch</p>
             <p className='time'>10pm</p>
         </div>
-        <div class="mailDescription__message">
+        <div className="mailDescription__message">
             This is a test
         </div>
 
