@@ -10,7 +10,7 @@ import {useSelector} from 'react-redux'
 import{selectComposeFormState} from './features/mailSlice'
 function App() {
   let composeFormState = useSelector(selectComposeFormState);
- console.log(composeFormState);
+
   return (
     <div className="app">
       <Header />

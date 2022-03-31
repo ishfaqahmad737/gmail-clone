@@ -1,7 +1,7 @@
-import React from 'react'
-import EmailRow from "./EmailRow"
-import {IconButton,Checkbox} from '@mui/material'
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
+import React, { useEffect,useState } from 'react';
+import EmailRow from "./EmailRow";
+import {IconButton,Checkbox} from '@mui/material';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import RedoIcon from '@mui/icons-material/Redo';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -11,11 +11,41 @@ import KeyboardHideIcon from '@mui/icons-material/KeyboardHide';
 import InboxIcon from '@mui/icons-material/Inbox';
 import PeopleIcon from '@mui/icons-material/People';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
-
+import {db} from'./firebase'
+import {   getFirestore,
+    collection,
+    query,
+    orderBy,
+    limit,
+    onSnapshot,
+    getDocs
+ } from "firebase/firestore";
 import './EmailList.css';
-import Section from './Section'
+import Section from './Section';
+import 'firebase/firestore';
 function EmailList() {
-    
+    const[emails,setEmails] = useState([])
+    async function getData(){
+        const q = query(collection(db, "emails"));
+        onSnapshot(q, (querySnapshot) => {
+                let emailsArray = [];
+                 querySnapshot.forEach((doc)=>(
+                   emailsArray.push
+                   ({id:doc.id,
+                    data:doc.data()}
+                    )))
+                    setEmails(emailsArray)
+                
+
+        });  };
+
+        useEffect(getData,[])
+        console.log('ishfaq',emails)
+        
+        let emailRow = emails.map(({id,data:{To,Subject,Message,timeStamp}})=>{
+            return <EmailRow key={id} id={id} title={To} subject={Subject} description={Message} time='10pm' />
+        })  
+        
   return (
     <div className="emailList" >
         <div className="emailList__settings">
@@ -54,9 +84,8 @@ function EmailList() {
         </div>
 
         <div className="emailList__list">
-            <EmailRow  title='Twitch' subject='Hey fellow streamer!!loremloremloremloremlorem' description='This is a test' time='10pm' />
-            <EmailRow  title='Twitch' subject='Hey fellow streamer!!' description='This is a test testtesttesttesttest' time='10pm' />
-            <EmailRow  title='Twitch' subject='Hey fellow streamer!!' description='This is a test' time='10pm' />
+       
+            {emailRow}
             
         </div>
        
